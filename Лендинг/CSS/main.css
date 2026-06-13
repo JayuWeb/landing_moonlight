@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: white;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrapper {
+    background-image: url('../imarges/1.jpg');
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+header {
+    padding: 1.6% 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .Moonlight {
+    font-family: 'Cinzel', sans-serif;
+    text-transform: uppercase;
+    font-size: 29px;
+    font-weight: 400;
+}
+
+header nav {
+    width: 100%;
+    max-width: 600px;
+}
+
+.burger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ul li a {
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+header nav ul li.active::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: #009ec2;
+    border-radius: 2px;
+}
+
+header nav ul li:not(.active):not(.btn) a:hover {
+    border-bottom: 3px solid #009ec2;
+    border-radius: 2px;
+}
+
+header nav ul li.btn a, .hero .hero--info .btn, .wrapper2 .hero2 .btn, .wrapper3 .btn, .wrapper5 .block2 .btn {
+    
+    background: none;
+    border: 2px solid #006880;
+    padding: 8px 20px;
+    border-radius: 5px;
+    transition: all 500ms ease;
+}
+
+header nav ul li.btn a:hover, .hero .hero--info .btn:hover, .wrapper2 .hero2 .btn:hover, .wrapper3 .btn:hover, .wrapper5 .block2 .btn:hover {
+    background: #006880;
+
+}
+
+.hero {
+    padding-bottom: 1%;
+    position: relative;
+    z-index: 1;
+}
+
+.hero--info {
+    width: 50%;
+    padding-top: 6%;
+    position: relative;
+    z-index: 3;
+}
+
+.hero--info h1 {
+    font-family: 'Cinzel', sans-serif;
+    text-transform: uppercase;
+    font-size: 60px;
+    font-weight: 500;
+}
+
+.hero--info h2 {
+    font-family: 'Cinzel', sans-serif;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.btn {
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    font-size: 16px;
+    padding: 8px 20px;
+}
+
+.hero--info .btn:hover {
+    cursor: pointer;
+}
+
+.wrapper2 {
+    background: linear-gradient(180deg,#010529, #060056, #060056, #05004a, #010529);
+    display: flex;
+    align-items: center;
+    gap: 5vh;
+}
+
+.wrapper2 .hero2 {
+    width: 18%;
+    padding-top: 1%;
+    padding-left: 20%;
+    
+}
+
+
+
+.hero2 h1 {
+    font-family: 'Cinzel', sans-serif;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.wrapper2 img {
+    margin-left: auto;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    margin-right: 10vh;
+    width: 50vw;
+    border-radius: 20px;
+    border: 2px solid #009ec2;
+}
+
+.wrapper3 {
+    background: #09072A;
+    background: linear-gradient(225deg, #09072A, #010101);
+    padding: 3% 4%;
+}
+
+.wrapper3 .text h1 {
+    font-family: 'Cinzel', sans-serif;
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 500; 
+}
+
+.wrapper3 .drinks, .wrapper3 .desserts {
+    display: flex;
+    gap: 5vh;
+}
+
+.wrapper3 .drinks .coffee img, .wrapper3 .desserts .cake img {
+    border-radius: 10px;
+}
+
+.wrapper3 .drinks .coffee, .wrapper3 .desserts .cake {
+    border: 2px solid #006880;
+    border-radius: 10px;
+}
+
+.wrapper3 .drinks .coffee .title-row::before, .wrapper3 .desserts .cake .title-row::before {
+    content: '';
+    display: block;
+    width: 90%;
+    height: 1px;
+    border-radius: 2px;
+    background-color: #006880;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.wrapper3 .drinks .coffee p {
+    min-height: 10vh;
+    max-width: 30vh;
+}
+
+.wrapper3 .drinks .coffee .title-row, .wrapper3 .desserts .cake .title-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 2vh;
+    font-size: 20px;
+    position: relative;
+}
+
+.wrapper3 .drinks .coffee .title-row h3, .wrapper3 .desserts .cake .title-row h3, .wrapper3 .desserts .cake .title-row span {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 2;
+}
+
+.wrapper3 .drinks .coffee p {
+    padding: 5%;
+}
+
+.wrapper3 .desserts .text {
+    width: 100%;
+}
+
+.wrapper4 {
+    padding: 4% 5%;
+    background: linear-gradient(to right, #010101, #09072A, #010101);
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper4 .block h3 {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.wrapper5 {
+    background-image: url('../imarges/13.jpg');
+    background-size: cover;
+    
+    background-position: center;
+    padding: 40px 50px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper5 .block, .wrapper5 .block2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-right: 20%;
+}
+
+.wrapper5 .block h2, .wrapper5 .block2 h2 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: 'Cinzel', sans-serif;
+}
+
+.wrapper5 .block2 .btn {
+    width: 60%;
+}
+
+@media (max-width: 768px) {
+    .wrapper .container .Moonlight {
+        font-size: 25px;
+    }
+    .wrapper {
+        background-image: url('../imarges/1media.jpg');
+        
+    }
+    .burger {
+        background: none;
+        border: none;
+        color: white;
+        display: block;
+    }
+
+    .wrapper header nav {
+        display: none;
+    }
+
+    .wrapper header nav.active {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 180px;
+
+        position: absolute;
+        top: 80px;
+        right: 20px;
+
+        background: rgba(10,10,20, .95);
+        padding: 20px;
+        border-radius: 15px;
+        z-index: 1000;
+
+        margin-top: 20px;
+    }
+    .wrapper header nav.active .btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    header nav ul, .wrapper2 {
+        flex-direction: column;
+    }
+    .hero--info h1 {
+        font-size: clamp(36px, 7vh, 64px);
+    }
+    .wrapper2 .hero2 {
+        padding-left: 1%;
+        width: 80%;
+    }
+    .wrapper2 img {
+        width: 70%;
+    }
+    .wrapper3 .drinks, .wrapper3 .desserts  {
+        flex-direction: column;
+    }
+    .wrapper4 {
+        flex-direction: column;
+    }
+    .wrapper5 {
+        flex-direction: column;
+    }
+    .wrapper5 .block, .wrapper5 .block2 {
+        gap: 5px;
+    }
+}
