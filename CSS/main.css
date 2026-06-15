@@ -8,7 +8,7 @@ body {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     color: white;
-    font-size: 16px;
+    font-size: clamp (16px, 1.2vw, 20px);
 }
 
 a {
@@ -40,7 +40,7 @@ header {
 header .Moonlight {
     font-family: 'Cinzel', sans-serif;
     text-transform: uppercase;
-    font-size: 29px;
+    font-size: clamp(25px, 2vw, 40px);
     font-weight: 400;
 }
 
@@ -58,6 +58,7 @@ header nav {
 header nav ul {
     list-style: none;
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -67,11 +68,8 @@ header nav ul li a {
     z-index: 2;
 }
 
-header nav ul li.active::after {
-    content: '';
-    display: block;
-    height: 2px;
-    background: #009ec2;
+header nav ul li.active {
+    border-bottom: 3px solid #009ec2;
     border-radius: 2px;
 }
 
@@ -110,14 +108,14 @@ header nav ul li.btn a:hover, .hero .hero--info .btn:hover, .wrapper2 .hero2 .bt
 .hero--info h1 {
     font-family: 'Cinzel', sans-serif;
     text-transform: uppercase;
-    font-size: 60px;
+    font-size: clamp(36px, 6vw, 70px);
     font-weight: 500;
 }
 
 .hero--info h2 {
     font-family: 'Cinzel', sans-serif;
     text-transform: uppercase;
-    font-size: 25px;
+    font-size: clamp(20px, 1.8vw, 30px);
     font-weight: 500;
 }
 
@@ -152,7 +150,7 @@ header nav ul li.btn a:hover, .hero .hero--info .btn:hover, .wrapper2 .hero2 .bt
 .hero2 h1 {
     font-family: 'Cinzel', sans-serif;
     text-transform: uppercase;
-    font-size: 40px;
+    font-size: clamp(30px, 2.7vw, 50px);
     font-weight: 500;
 }
 
@@ -175,7 +173,7 @@ header nav ul li.btn a:hover, .hero .hero--info .btn:hover, .wrapper2 .hero2 .bt
 .wrapper3 .text h1 {
     font-family: 'Cinzel', sans-serif;
     text-transform: uppercase;
-    font-size: 50px;
+    font-size: clamp(35px, 3.6vw, 60px);
     font-weight: 500; 
 }
 
@@ -215,14 +213,14 @@ header nav ul li.btn a:hover, .hero .hero--info .btn:hover, .wrapper2 .hero2 .bt
     display: flex;
     justify-content: space-between;
     padding: 2vh;
-    font-size: 20px;
+    font-size: clamp(16px, 1.4vw, 30px);
     position: relative;
+    align-items: center;
 }
 
 .wrapper3 .drinks .coffee .title-row h3, .wrapper3 .desserts .cake .title-row h3, .wrapper3 .desserts .cake .title-row span {
     font-weight: 400;
     text-transform: uppercase;
-    font-size: 2;
 }
 
 .wrapper3 .drinks .coffee p {
@@ -275,9 +273,6 @@ header nav ul li.btn a:hover, .hero .hero--info .btn:hover, .wrapper2 .hero2 .bt
 }
 
 @media (max-width: 768px) {
-    .wrapper .container .Moonlight {
-        font-size: 25px;
-    }
     .wrapper {
         background-image: url('../imarges/1media.jpg');
         
@@ -309,6 +304,11 @@ header nav ul li.btn a:hover, .hero .hero--info .btn:hover, .wrapper2 .hero2 .bt
         z-index: 1000;
 
         margin-top: 20px;
+        font-size: 20px;
+    }
+
+    .wrapper header nav.active ul {
+        align-items: start;
     }
     .wrapper header nav.active .btn {
         font-size: 14px;
@@ -317,9 +317,6 @@ header nav ul li.btn a:hover, .hero .hero--info .btn:hover, .wrapper2 .hero2 .bt
 
     header nav ul, .wrapper2 {
         flex-direction: column;
-    }
-    .hero--info h1 {
-        font-size: clamp(36px, 7vh, 64px);
     }
     .wrapper2 .hero2 {
         padding-left: 1%;
